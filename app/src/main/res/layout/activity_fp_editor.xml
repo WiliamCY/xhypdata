@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background"
+        android:orientation="vertical">
+
+        <com.example.commons.view.CustomNavigatorBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_120"
+            android:background="@mipmap/main_title"
+            app:leftImage="@mipmap/title_return"
+            app:midText="@string/fp_editor"
+            app:midTextFontColor="#FFFFFF">
+
+        </com.example.commons.view.CustomNavigatorBar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@mipmap/common_bg"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_80"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editor_name"
+                    style="@style/finger_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="@string/fp_editor"/>
+
+                <Button
+                    android:id="@+id/editor_text_delete"
+                    android:layout_width="@dimen/margin_46"
+                    android:layout_height="@dimen/margin_46"
+                    android:background="@drawable/cancel_button"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_80"/>
+
+            <TextView
+                android:id="@+id/editor_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:textSize="@dimen/text_32"
+                android:gravity="center"
+                android:textColor="@color/login"
+                android:text="@string/editor_save"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_20"/>
+
+
+            <TextView
+                android:id="@+id/editor_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:textSize="@dimen/text_32"
+                android:gravity="center"
+                android:textColor="@color/delete"
+                android:text="@string/delete_finger"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_20"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

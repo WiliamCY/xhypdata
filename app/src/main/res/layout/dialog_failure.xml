@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/margin_642" android:layout_height="@dimen/margin_662"
+    android:background="@drawable/progress_bg">
+
+    <TextView
+        android:id="@+id/failure_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_73"
+        android:gravity="center"
+        android:textColor="@color/failure"
+        android:textSize="@dimen/text_42"
+        android:text="@string/no_order"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/icon_regret" />
+
+    <Button
+        android:id="@+id/failure_click"
+        style="@style/account_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/i_know"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:background="@drawable/try_again_button"/>
+</RelativeLayout>

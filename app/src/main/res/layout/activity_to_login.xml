@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.commons.view.CustomNavigatorBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_120"
+            app:leftImage="@mipmap/top_back"
+            app:midText="@string/to_login"
+            app:midTextFontColor="#000">
+
+        </com.example.commons.view.CustomNavigatorBar>
+        
+        <com.example.commons.view.CustomEditText
+            android:id="@+id/to_login_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_120"
+            android:layout_marginRight="@dimen/margin_100"
+            android:layout_marginLeft="@dimen/margin_100"
+            app:rightButton="@drawable/cancel_button"
+            app:drawable="@mipmap/login_student"
+            app:hintColor="@color/login"
+            app:hintSize="@dimen/text_28"
+            app:inputColor="@color/black"
+            app:inputHint="@string/input_number"
+            app:inputSize="@dimen/text_28"
+            app:inputType="text"
+            app:inputBackground="@null"
+            app:inputHeight="@dimen/margin_120"
+            app:drawablePadding="@dimen/margin_20"
+            app:btnType = "delete"
+            app:btnVisibility="gone">
+
+        </com.example.commons.view.CustomEditText>
+
+        <View
+            android:layout_width="@dimen/margin_590"
+            android:layout_height="@dimen/margin_1"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/hint"/>
+
+        <com.example.commons.view.CustomEditText
+            android:id="@+id/to_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_100"
+            android:layout_marginLeft="@dimen/margin_100"
+            app:drawable="@mipmap/login_password"
+            app:rightButton="@mipmap/conceal_off"
+            app:hintColor="@color/login"
+            app:hintSize="@dimen/text_28"
+            app:inputColor="@color/black"
+            app:inputHint="@string/input_password"
+            app:inputSize="@dimen/text_28"
+            app:inputType="textPassword"
+            app:inputBackground="@null"
+            app:inputHeight="@dimen/margin_120"
+            app:drawablePadding="@dimen/margin_20"
+            app:btnType = "eyes"
+            app:btnVisibility="visible">
+
+        </com.example.commons.view.CustomEditText>
+
+        <View
+            android:layout_width="@dimen/margin_590"
+            android:layout_height="@dimen/margin_1"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/hint"/>
+
+        <Button
+            android:id="@+id/to_login"
+            style="@style/account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_80"
+            android:text="@string/login"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/logining_button"/>
+
+        <TextView
+            android:id="@+id/to_login_forgot"
+            style="@style/main_sentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_137"/>
+
+    </LinearLayout>
+</layout>

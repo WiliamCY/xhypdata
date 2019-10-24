@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/module_base_id_fial_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_defeated" />
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_50"
+        android:id="@+id/module_base_fial_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/loading_fail"
+        android:textColor="#666666"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/module_base_id_fail_retry"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_30"
+        android:background="@drawable/defeated_button"
+        android:gravity="center"
+        android:text="@string/try_again"
+        android:textColor="#FFF"
+        android:textSize="16sp" />
+
+</LinearLayout>

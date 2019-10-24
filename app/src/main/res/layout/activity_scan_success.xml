@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.example.commons.view.CustomNavigatorBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_120"
+            android:background="@mipmap/main_title"
+            app:leftImage="@mipmap/title_return"
+            app:midText="@string/wait_return"
+            app:midTextFontColor="#FFFFFF">
+
+        </com.example.commons.view.CustomNavigatorBar>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/print_top_bg"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/print_bg"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_50"
+                    android:orientation="horizontal">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.example.commons.view.tick.TickView
+                            android:id="@+id/scan_success_tick"
+                            android:layout_width="@dimen/margin_150"
+                            android:layout_height="@dimen/margin_150"
+                            app:check_base_color="@color/success"
+                            android:visibility="invisible"
+                            app:radius="@dimen/margin_50"
+                            app:tick_radius="@dimen/margin_30"
+                            app:tick_radius_set="@dimen/margin_10"
+                            app:rate="normal"/>
+
+                        <ImageView
+                            android:id="@+id/scan_success_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/icon_scan"/>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/borrow_success"
+                            android:id="@+id/scan_success_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/scan_success"/>
+                        <TextView
+                            style="@style/scan_success"
+                            android:id="@+id/scan_success_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="9"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:text="@string/scan_msg"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_50"
+                    android:layout_marginRight="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_80"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/finger_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/book_name"/>
+
+                    <TextView
+                        style="@style/finger_msg"
+                        android:id="@+id/scan_success_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/book_name"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="560dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:background="@mipmap/item_dotted"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_50"
+                    android:layout_marginRight="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/finger_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/borrow_time"/>
+
+                    <TextView
+                        style="@style/finger_msg"
+                        android:id="@+id/scan_borrow_time"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/borrow_time"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="560dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:background="@mipmap/item_dotted"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_50"
+                    android:layout_marginRight="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/finger_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/need_return_time"/>
+
+                    <TextView
+                        style="@style/finger_msg"
+                        android:id="@+id/scan_need_return_time"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/need_return_time"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="560dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:background="@mipmap/item_dotted"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_50"
+                    android:layout_marginRight="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/finger_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/borrower"/>
+
+                    <TextView
+                        style="@style/finger_msg"
+                        android:id="@+id/scan_success_borrower"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/borrower"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="560dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:background="@mipmap/item_dotted"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_80"
+                    android:src="@mipmap/icon_barcode"/>
+
+                <TextView
+                    style="@style/finger_msg"
+                    android:id="@+id/scan_success_isbn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:text="@string/borrower"/>
+
+                <Button
+                    android:id="@+id/scan_success_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm_to_return"
+                    android:textSize="@dimen/text_28"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/margin_50"
+                    android:background="@drawable/defeated_button"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scan_success_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_book"/>
+
+                <com.example.commons.view.CustomTextView
+                    style="@style/main_borrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="@string/go_borrow"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="350dp"
+                    android:src="@mipmap/icon_return"/>
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>

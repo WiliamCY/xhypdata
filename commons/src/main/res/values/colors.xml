@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tick_yellow">#f5d747</color>
+    <color name="tick_gray">#eaeaea</color>
+    <color name="tick_white">#FFFFFF</color>
+    <color name="tick_green">#3CB371</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="login">#3AA2FB</color>
+    <color name="main_day">#333333</color>
+    <color name="main_line">#DCDCDC</color>
+    <color name="delete">#EB3941</color>
+    <color name="hint">#ADADAD</color>
+    <color name="success">#5280E5</color>
+    <color name="success_msg">#456BBF</color>
+    <color name="failure">#F05A48</color>
+    <color name="record">#19B1FF</color>
+    <color name="gary">#7A7A7A</color>
+</resources>

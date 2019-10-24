@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background"
+        android:orientation="vertical">
+
+        <com.example.commons.view.CustomNavigatorBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_120"
+            android:background="@mipmap/main_title"
+            app:leftImage="@mipmap/title_return"
+            app:midText="@string/fetch"
+            app:midTextFontColor="#FFFFFF">
+
+        </com.example.commons.view.CustomNavigatorBar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@mipmap/common_bg"
+            android:orientation="vertical">
+
+            <com.example.commons.view.refresh.CustomRefreshView
+                android:id="@+id/fetch_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_30">
+
+            </com.example.commons.view.refresh.CustomRefreshView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

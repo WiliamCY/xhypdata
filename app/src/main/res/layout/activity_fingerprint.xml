@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background"
+        android:orientation="vertical">
+
+        <com.example.commons.view.CustomNavigatorBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_120"
+            android:background="@mipmap/main_title"
+            app:leftImage="@mipmap/title_return"
+            app:midText="@string/entry_finger"
+            app:midTextFontColor="#FFFFFF">
+
+        </com.example.commons.view.CustomNavigatorBar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@mipmap/common_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/finger_tip"
+                style="@style/finger_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_160"
+                android:layout_centerHorizontal="true"
+                android:text="@string/input_finger"/>
+            <TextView
+                style="@style/finger_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/finger_tip"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/finger_scanning"
+                android:layout_width="@dimen/progress_300"
+                android:layout_height="@dimen/progress_300"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"/>
+
+            <com.example.commons.view.tick.TickView
+                android:id="@+id/finger_tick"
+                android:layout_width="@dimen/margin_300"
+                android:layout_height="@dimen/margin_300"
+                android:visibility="gone"
+                app:check_base_color="@color/tick_yellow"
+                app:radius="@dimen/margin_66"
+                app:tick_radius="@dimen/margin_30"
+                app:tick_radius_set="@dimen/margin_10"
+                app:rate="normal"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/finger_state"
+                style="@style/main_sentence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_170"
+                android:layout_centerHorizontal="true"
+                android:text="@string/input_finger" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">新华一品</string>
+    <string name="app_titel">Fingerprint Demo 2.1</string>
+    <string name="action_settings">Settings</string>
+    <string name="status">Plase Open Reader</string>
+    <string name="txt_status"></string>
+    <string name="txt_bt1">Open RTxx Device</string>
+    <string name="txt_bt2">Close RTxx Device</string>
+    <string name="txt_bt9">Get Fingerprint Image</string>
+    <string name="txt_bt10">Enrol Template</string>
+    <string name="txt_bt11">Match Template</string>
+    <string name="txt_bt12">Continuous Match</string>
+    <string name="txt_bt13">Clear Template</string>
+    <string name="txt_image">Fingerprint Image</string>
+    <string name="txt_btstop">Stop Match</string>
+    <string name="title_activity_test">TestActivity</string>
+</resources>

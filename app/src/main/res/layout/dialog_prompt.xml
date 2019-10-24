@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/margin_642" android:layout_height="@dimen/margin_662"
+    android:background="@drawable/progress_bg">
+
+    <TextView
+        android:id="@+id/prompt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_73"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_42"
+        android:text="@string/fp_editor"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/icon_defeated" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/prompt_cancel"
+            style="@style/fingerprint_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_66"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_50"
+            android:text="@string/revalidation"
+            android:background="@drawable/fingerprint_button"/>
+
+        <Button
+            android:id="@+id/prompt_click"
+            style="@style/account_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_66"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_50"
+            android:text="@string/go_login"
+            android:background="@drawable/to_login_button"/>
+    </LinearLayout>
+</RelativeLayout>

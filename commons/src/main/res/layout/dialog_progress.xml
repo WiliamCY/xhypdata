@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.example.commons.view.ProgressBar
+        android:layout_width="@dimen/progress_300"
+        android:layout_height="@dimen/progress_300"
+        android:layout_centerInParent="true"
+        app:text="请稍后..."
+        app:textSize="18sp"
+        app:enlarge="3"
+        app:androidtextColor="#000">
+    </com.example.commons.view.ProgressBar>
+
+</RelativeLayout>

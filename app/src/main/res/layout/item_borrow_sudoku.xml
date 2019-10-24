@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_10">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/item_borrow_pic"
+            android:layout_width="@dimen/margin_200"
+            android:layout_height="@dimen/margin_280"
+            android:src="@mipmap/book1"/>
+
+        <TextView
+            android:id="@+id/item_borrow_name"
+            style="@style/borrow_name"
+            android:layout_width="@dimen/margin_200"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/input_number"/>
+
+        <Button
+            style="@style/borrow_button"
+            android:id="@+id/item_borrow_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:text="@string/borrow_button"
+            android:background="@drawable/borrow_button"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/borrow_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@mipmap/icon_have_to_borrow"/>
+</FrameLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/scroll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="@dimen/margin_10"
+            android:layout_height="@dimen/margin_10"
+            android:background="@drawable/main_round"
+            android:layout_marginRight="@dimen/margin_20"/>
+        <com.example.commons.view.CustomTextView
+            android:id="@+id/tv_banner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scroll_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_20"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="@dimen/margin_10"
+            android:layout_height="@dimen/margin_10"
+            android:background="@drawable/main_round"
+            android:alpha="0.8"
+            android:layout_marginRight="@dimen/margin_20"/>
+        <com.example.commons.view.CustomTextView
+            android:id="@+id/tv_banner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</LinearLayout>

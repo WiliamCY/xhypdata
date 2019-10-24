@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background"
+        android:orientation="vertical">
+
+        <com.example.commons.view.CustomNavigatorBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_120"
+            android:background="@mipmap/main_title"
+            app:leftImage="@mipmap/title_return"
+            app:midText="@string/case_set"
+            app:midTextFontColor="#FFFFFF">
+
+        </com.example.commons.view.CustomNavigatorBar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@mipmap/common_bg"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_80"/>
+
+            <LinearLayout
+                android:id="@+id/set_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/information_sets"
+                    android:textSize="@dimen/text_32"
+                    android:textColor="#4B4B4B"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_20"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/network_set"
+                    android:textSize="@dimen/text_32"
+                    android:textColor="#4B4B4B"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_20"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/factory_reset"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_66"
+                android:layout_marginBottom="@dimen/margin_30"
+                android:gravity="center"
+                android:text="@string/factory_data_reset"
+                android:textColor="#4B4B4B"
+                android:textSize="@dimen/text_26" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

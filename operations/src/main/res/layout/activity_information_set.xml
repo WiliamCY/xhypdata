@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background"
+        android:orientation="vertical">
+
+        <com.example.commons.view.CustomNavigatorBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_120"
+            android:background="@mipmap/main_title"
+            app:leftImage="@mipmap/title_return"
+            app:midText="@string/information_sets"
+            app:midTextFontColor="#FFFFFF">
+
+        </com.example.commons.view.CustomNavigatorBar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_20"
+            android:background="@mipmap/common_bg"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_80"/>
+
+            <com.example.commons.view.CustomEditText
+                android:id="@+id/set_case_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                app:rightButton="@drawable/cancel_button"
+                app:hintColor="@color/login"
+                app:hintSize="@dimen/text_28"
+                app:inputColor="@color/black"
+                app:inputHint="@string/case_name"
+                app:inputSize="@dimen/text_28"
+                app:inputType="text"
+                app:inputBackground="@null"
+                app:inputHeight="@dimen/margin_80"
+                app:drawablePadding="@dimen/margin_20"
+                app:btnType = "delete"
+                app:btnVisibility="gone">
+            </com.example.commons.view.CustomEditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_20"/>
+
+            <com.example.commons.view.CustomEditText
+                android:id="@+id/set_case_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                app:rightButton="@drawable/cancel_button"
+                app:hintColor="@color/login"
+                app:hintSize="@dimen/text_28"
+                app:inputColor="@color/black"
+                app:inputHint="@string/case_number"
+                app:inputSize="@dimen/text_28"
+                app:inputType="text"
+                app:inputBackground="@null"
+                app:inputHeight="@dimen/margin_80"
+                app:drawablePadding="@dimen/margin_20"
+                app:btnType = "delete"
+                app:btnVisibility="gone">
+            </com.example.commons.view.CustomEditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_20"/>
+
+            <com.example.commons.view.CustomEditText
+                android:id="@+id/set_case_door_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                app:rightButton="@drawable/cancel_button"
+                app:hintColor="@color/login"
+                app:hintSize="@dimen/text_28"
+                app:inputColor="@color/black"
+                app:inputHint="@string/case_door_count"
+                app:inputSize="@dimen/text_28"
+                app:inputType="text"
+                app:inputBackground="@null"
+                app:inputHeight="@dimen/margin_80"
+                app:drawablePadding="@dimen/margin_20"
+                app:btnType = "delete"
+                app:btnVisibility="gone">
+            </com.example.commons.view.CustomEditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_20"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"
+                android:layout_marginTop="@dimen/margin_120"/>
+
+            <TextView
+                android:id="@+id/set_information_save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_100"
+                android:gravity="center"
+                android:textSize="@dimen/text_32"
+                android:textColor="#3AA2FB"
+                android:text="@string/save_set"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2"
+                android:background="@mipmap/item_dotted"
+                android:layout_marginLeft="@dimen/margin_56"
+                android:layout_marginRight="@dimen/margin_56"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

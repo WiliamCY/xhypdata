@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="quotes">
+        <item>劳于读书，逸于作文 —— 程端礼</item>
+        <item>读书之法，在循序而渐进，熟读而精思 —— 朱熹</item>
+        <item>读书使人心明眼亮 —— 伏尔泰</item>
+        <item>为乐趣而读书 —— 毛姆</item>
+        <item>外物之味，久则可厌，读书之味，愈久愈深 —— 程颐</item>
+        <item>读书要玩味 —— 程颢</item>
+        <item>读书使人成为完善的人 —— 培根</item>
+        <item>纸上得来终觉浅，绝知此事要躬行 —— 陆游</item>
+        <item>读活书，活读书，读书活 —— 郭沫若</item>
+        <item>读书谓已多，抚事知不足 —— 王安石</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>壹月</item>
+        <item>贰月</item>
+        <item>叁月</item>
+        <item>肆月</item>
+        <item>伍月</item>
+        <item>陆月</item>
+        <item>柒月</item>
+        <item>捌月</item>
+        <item>玖月</item>
+        <item>拾月</item>
+        <item>拾壹月</item>
+        <item>拾贰月</item>
+    </string-array>
+</resources>

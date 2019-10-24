@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TODO: Update blank fragment layout -->
+   <data></data>
+
+    <com.example.commons.view.refresh.CustomRefreshView
+        android:id="@+id/give_back_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.commons.view.refresh.CustomRefreshView>
+
+</layout>

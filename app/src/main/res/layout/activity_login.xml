@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_top_bar"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_150"
+            app:srcCompat="@mipmap/bookcase" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <Button
+                    style="@style/account_text"
+                    android:id="@+id/login_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_100"
+                    android:text="@string/account_login"
+                    android:background="@drawable/to_login_button"/>
+
+                <Button
+                    style="@style/fingerprint_text"
+                    android:id="@+id/login_fingerprint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_80"
+                    android:text="@string/fingerprint_login"
+                    android:background="@drawable/fingerprint_button"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_success"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <com.example.commons.view.tick.TickView
+                    android:id="@+id/login_tick"
+                    android:layout_width="@dimen/margin_300"
+                    android:layout_height="@dimen/margin_300"
+                    app:check_base_color="@color/tick_green"
+                    app:radius="@dimen/margin_66"
+                    app:tick_radius="@dimen/margin_30"
+                    app:tick_radius_set="@dimen/margin_10"
+                    app:rate="normal"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/login_user"
+                    style="@style/main_sentence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/login_tick"
+                    android:text="@string/login_welcome"/>
+            </RelativeLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>
