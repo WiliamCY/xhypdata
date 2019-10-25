@@ -23,5 +23,4 @@ public class ScanModel implements ScanContract.ScanModel {
     public Observable<ScanBean> getBookByIsbn(String access_token, String isbn, String machid, String student_id) {
         return api.getBookByIsbn(access_token, isbn, machid, student_id).map(scanBean -> scanBean).compose(RetrofitClient.getInstance().schedulersTransformer);
     }
-
 }

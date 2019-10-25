@@ -1,5 +1,6 @@
 package com.example.xinhuayipin.ui.activity;
 
+import android.content.SharedPreferences;
 import android.text.TextUtils;
 
 import com.example.commons.BaseActivity;
@@ -53,6 +54,10 @@ public class ToLoginActivity extends BaseActivity<ToLoginPresenter, ActivityToLo
         dismissProgressDialog();
         showToast(msg);
         MyApplication.getInstance().saveSchoolId((int)schoolId);
+        SharedPreferences.Editor sp = getSharedPreferences("LoginMessage", MODE_PRIVATE).edit();
+        sp.putString("schoolId", String.valueOf(schoolId));
+        sp.putString("studentId",String.valueOf(schoolId));
+        sp.commit();
         UserDataBean userDataBean = new UserDataBean();
         userDataBean.setStudentId((int)studentId);
         userDataBean.setFingerId(0);

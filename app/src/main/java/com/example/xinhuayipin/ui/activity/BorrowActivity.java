@@ -54,8 +54,6 @@ public class BorrowActivity extends BaseActivity<BorrowPresenter, ActivityBorrow
     protected void initData() {
         super.initData();
         showProgressDialog();
-        String m = mToken;
-        String mMaa = mMachId;
         mPresenter.getBorrowData(mToken, mMachId);
     }
 

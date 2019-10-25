@@ -1,13 +1,25 @@
 package com.example.xinhuayipin.ui.activity;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.commons.BaseActivity;
 import com.example.commons.annotations.ViewInject;
+import com.example.commons.bus.LiveDataBus;
 import com.example.xinhuayipin.R;
+import com.example.xinhuayipin.app.MyApplication;
 import com.example.xinhuayipin.data.ScanBean;
+import com.example.xinhuayipin.data.UserDataBean;
+import com.example.xinhuayipin.data.borrow.BorrowBean;
 import com.example.xinhuayipin.databinding.ActivityScanBinding;
 import com.example.xinhuayipin.mvp.contract.ScanContract;
 import com.example.xinhuayipin.mvp.presenter.ScanPresenter;
@@ -22,6 +34,11 @@ import com.example.xinhuayipin.ui.dialog.RemindDialog;
 public class ScanActivity extends BaseActivity<ScanPresenter, ActivityScanBinding> implements ScanContract.ScanView {
 
     private PromptDialog dialog;
+    private String   studentId;
+    private int mStudentId;
+    private Bundle bundle;
+    private BroadcastReceiver mReceiver;
+    private String isb;
 
     @Override
     protected void initPresent() {
@@ -32,20 +49,64 @@ public class ScanActivity extends BaseActivity<ScanPresenter, ActivityScanBindin
     @Override
     protected void initView() {
         super.initView();
-//        mDataBinding.scanSweep.setImageResource(R.drawable.bar_code);
         Glide.with(mContext).load(R.drawable.bar_code).diskCacheStrategy(DiskCacheStrategy.ALL).into(mDataBinding.scanSweep);
+        mContext = getApplicationContext();
+        mReceiver= new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                final String scanResult_1=intent.getStringExtra("SCAN_BARCODE1");
+                final String scanResult_2=intent.getStringExtra("SCAN_BARCODE2");
+                final int barcodeType = intent.getIntExtra("SCAN_BARCODE_TYPE", -1); // -1:unknown
+                final String scanStatus=intent.getStringExtra("SCAN_STATE");
+                if("ok".equals(scanStatus)){
+
+                }else{
+
+                }
+            }
+        };
+
+
+
     }
 
     @Override
     protected void initData() {
         super.initData();
-        mPresenter.getBookByIsbn(mToken,"978-7-810-82143-8", mMachId, "");
+        Intent intent = new Intent ("ACTION_BAR_SCANCFG");
+        intent.putExtra("EXTRA_SCAN_MODE", 3);
+        mContext.sendBroadcast(intent);
+        mDataBinding.ibsEdit.setText("");
+
+
+
     }
+
 
     @Override
     protected void initListener() {
         super.initListener();
         mDataBinding.scanFinish.setOnClickListener(v -> finish());
+        mDataBinding.ibsEdit.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String c = mDataBinding.ibsEdit.getText().toString();
+                Toast.makeText(getApplicationContext(), c, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+
+            }
+        });
+
+
     }
 
 
@@ -81,7 +142,7 @@ public class ScanActivity extends BaseActivity<ScanPresenter, ActivityScanBindin
         dialog = new PromptDialog(mContext, new PromptDialog.listener() {
             @Override
             public void confirm() {
-                mPresenter.getBookByIsbn(mToken,"978-7-810-82143-8", mMachId, "");
+                mPresenter.getBookByIsbn(mToken,"978-7-810-82143-8", mMachId, studentId);
             }
 
             @Override
@@ -92,4 +153,27 @@ public class ScanActivity extends BaseActivity<ScanPresenter, ActivityScanBindin
         dialog.setDialogMsg(getString(R.string.network_error), getString(R.string.try_again), getString(R.string.button_cancel));
         dialog.show();
     }
+    private void registerReceiver()
+    {
+        IntentFilter mFilter= new IntentFilter("nlscan.action.SCANNER_RESULT");
+        registerReceiver(mReceiver, mFilter);
+    }
+    private void unRegisterReceiver()
+    {
+        try {
+            unregisterReceiver(mReceiver);
+        } catch (Exception e) {
+        }
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unRegisterReceiver();
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver();
+    }
+
 }

@@ -35,5 +35,12 @@
             android:layout_marginRight="@dimen/margin_100"
             android:background="@drawable/fork_button"/>
 
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/ibsEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
     </RelativeLayout>
 </layout>

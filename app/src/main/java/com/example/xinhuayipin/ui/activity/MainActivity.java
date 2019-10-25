@@ -36,8 +36,10 @@ public class MainActivity extends BaseActivity<MainPresenter, ActivityMainBindin
     private boolean actionToRecord = false;
     private boolean actionToFetch = false;
     private boolean actionToFinger = false;
+    private boolean actionToScan = false;
     private boolean verify = false;
     private List<Integer> imageViews;
+    private SharedPreferences sp;
 
     @Override
     protected void initPresent() {
@@ -60,7 +62,7 @@ public class MainActivity extends BaseActivity<MainPresenter, ActivityMainBindin
         mPresenter.getQuotes();
         initRadioGroup();
         getFingerprint();
-        Log.i(TAG, "initData: "+mToken);
+
     }
 
 
@@ -81,6 +83,8 @@ public class MainActivity extends BaseActivity<MainPresenter, ActivityMainBindin
                 skipAnotherActivity(bundle, RecordActivity.class);
                 actionToRecord = false;
             }else if (actionToFinger){
+                skipAnotherActivity(bundle, FpManagementActivity.class);
+            }else if(actionToScan){
                 skipAnotherActivity(bundle, FpManagementActivity.class);
             }
         });
@@ -159,7 +163,7 @@ public void showPagerImgs() {
         imageViews.add(ResourcesUtil.getBackground().get(i));
 
     }
-    banner.setImages(imageViews).setImageLoader(new GlideImageLoader()).start();
+    banner.setImages(imageViews).setImageLoader(new GlideImageLoader()).setDelayTime(8000).start();
 
 }
 
@@ -191,9 +195,6 @@ public void showPagerImgs() {
                 skipAnotherActivity(BorrowActivity.class);
                 break;
             case R.id.main_fetch:
-                if(verify){
-                    skipAnotherActivity(FetchActivity.class);
-                }
                 skipAnotherActivity(VerifyActivity.class);
                 actionToFetch = true;
                 break;
@@ -201,16 +202,12 @@ public void showPagerImgs() {
                 skipAnotherActivity(ScanActivity.class);
                 break;
             case R.id.main_record:
-                if(verify){
-                    skipAnotherActivity(RecordActivity.class);
-                }
+
                 skipAnotherActivity(VerifyActivity.class);
                 actionToRecord = true;
                 break;
             case R.id.main_fingerprint:
-                if(verify){
-                    skipAnotherActivity(FpManagementActivity.class);
-                }
+
                 skipAnotherActivity(VerifyActivity.class);
                 actionToFinger = true;
                 break;

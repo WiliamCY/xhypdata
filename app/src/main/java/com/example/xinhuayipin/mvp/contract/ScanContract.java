@@ -21,6 +21,7 @@ public interface ScanContract {
 
         Observable<ScanBean> getBookByIsbn(@Field("access_token") String access_token, @Field("isbn") String isbn, @Field("machid") String machid, @Field("student_id") String student_id);
 
+
     }
 
     interface ScanView extends IBaseView{
